@@ -1,10 +1,12 @@
 let microondas = (prato, tempo) => {
-    switch (prato) {
+    switch (prato) /*usando switch pra verificar qual foi a opção escolhida de prato */ {
         case 1:
-            if ((tempo >= 10) & (tempo < 20)) {
+            if ((tempo >= 10) & (tempo < 20)) /* aqui o if pra ver se o tempo escolhido é o que quero para esse retorno */ 
+            {
                 return 'Pipoca pronta, bom apetite!!!'
             }
-            if ((tempo >= 20) & (tempo < 30)) {
+            if ((tempo >= 20) & (tempo < 30)) /*usando maior ou igual pra especificar quais numeros quero para esse retorno , no caso numeros maiores ou iguais a 20 e menores que 30*/ 
+            {
                 return 'A Pipoca queimou'
             }
             if (tempo < 10) {
@@ -13,7 +15,7 @@ let microondas = (prato, tempo) => {
             if (tempo >= 30) {
                 return 'kabumm'
             }
-            else
+            else /*aqui quero os numeros, strings ou qualquer valor que nao entre nas outras especificações de tempo*/
                 return 'Tempo indeterminado , usando tempo padrão , Pipoca pronta, bom apetite!!!'
 
             break;
@@ -85,7 +87,8 @@ let microondas = (prato, tempo) => {
                 return 'Tempo indeterminado , usando tempo padrão , Brigadeiro pronto, bom apetite!!!'
 
             break;
-        default: return "Prato inexistente"
+        default: /* aqui quero o que retorne caso o prato nao exista */
+        return "Prato inexistente"
             break;
     }
 
